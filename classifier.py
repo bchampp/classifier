@@ -26,8 +26,8 @@ for brown in browns:
 # Convert to NP Arrays
 animals = np.array(data)
 labels = np.array(labels)
-np.save("animals",animals)
-np.save("labels",labels)
+np.save("labels/animals",animals)
+np.save("labels/labels",labels)
 
 def main():
     print("Hello World")
