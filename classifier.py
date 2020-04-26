@@ -2,6 +2,8 @@ import os
 import cv2
 from PIL import Image
 import numpy as np
+import keras
+from keras.utils import np_utils
 
 SAVE_LABELS = True
 LOAD_LABELS = True
@@ -54,8 +56,5 @@ test_length=len(x_test)
 
 (y_train,y_test)=labels[(int)(0.1*data_length):],labels[:(int)(0.1*data_length)]
 
-import keras
-from keras.utils import np_utils
-#One hot encoding
 y_train=keras.utils.to_categorical(y_train,num_classes)
 y_test=keras.utils.to_categorical(y_test,num_classes)
